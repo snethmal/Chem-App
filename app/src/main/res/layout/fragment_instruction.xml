@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="130dp"
+        android:text="1)	Lewis structure"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a"
+        android:layout_marginLeft="15dp"
+        android:text="
+•	1. Take a picture of the question.\n
+•	2. Crop the desired question area.\n
+•	3. Click submit button to get the answer.
+" />
+
+    <TextView
+        android:id="@+id/c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b"
+        android:layout_marginLeft="15dp"
+        android:text="2)	Essay questions"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/c"
+        android:layout_marginLeft="15dp"
+        android:text="
+•	1. Take a picture of the question.\n
+•	2. Crop the desired question area.\n
+•	3. Click submit button to get the answer.
+
+" />
+
+    <TextView
+        android:id="@+id/e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/d"
+        android:layout_marginLeft="15dp"
+        android:text="3)	Chemical conversions"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/e"
+        android:layout_marginLeft="15dp"
+        android:text="
+•	 1. Take a picture of the question.\n
+•	2. Crop the desired question area.\n
+•	3. Click submit button to get the answer.
+" />
+
+    <TextView
+        android:id="@+id/g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/f"
+        android:layout_marginLeft="15dp"
+        android:text="4)	IUPAC naming"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/g"
+        android:layout_marginLeft="15dp"
+        android:text="
+•	1. Take a picture of the question.\n
+•	2. Crop the desired question area.\n
+•	3. Click submit button to get the answer.
+" />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.supunnethmal.slide">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Bot.CameraActivity" />
+        <activity android:name=".Bot.CameraActivityWithVision" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="orc" />
+
+        <activity android:name=".Listview" />
+        <activity android:name=".Forum.NewPost" />
+        <activity android:name=".Forum.post" />
+        <activity android:name=".Api2.ShowResponse" />
+        <activity android:name=".Api2.MainApi" />
+        <activity
+            android:name=".Result.Result"
+            android:label="@string/title_activity_result"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Result.ResultActivity"
+            android:label="@string/title_activity_result"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>

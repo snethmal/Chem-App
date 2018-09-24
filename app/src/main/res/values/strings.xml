@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Chem Guide</string>
+    <string name="Search">Search</string>
+    <string name="Add">Add</string>
+
+    <array name="category">
+        <item>Organic Chemistry</item>
+        <item>Inorganic Chemistry</item>
+        <item>Physical Chemistry</item>
+        <item>Industrial Chemistry</item>
+    </array>
+    <string name="title_activity_result">Result</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

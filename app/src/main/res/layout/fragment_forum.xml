@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatingActionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_colorPressed="@color/colorAccent"
+        app:menu_colorNormal="#958c0c62"
+        app:menu_fab_label=""
+        app:menu_labels_colorNormal="@android:color/transparent"
+        app:menu_labels_textColor="@color/colorText"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add"
+            app:fab_label="@string/Add"
+            app:fab_size="mini"
+            app:fab_colorNormal="#95aa3bb7"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            app:fab_label="@string/Search"
+            app:fab_size="mini"
+            app:fab_colorNormal="#95aa3bb7"/>
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>
