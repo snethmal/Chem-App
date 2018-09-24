@@ -8,123 +8,135 @@
     android:focusableInTouchMode="true"
     tools:context="com.example.supunnethmal.slide.Forum.NewPost">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <!--<ScrollView-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent">-->
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linlayoutmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tittle"
+        <TextView
+            android:id="@+id/tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Post Title"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/tittle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="category" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/category"
+            android:src="@drawable/cam" />
+
+        <TextView
+            android:id="@+id/tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="Search Tags" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tags"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/Correct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Post Title"
-                android:textSize="30sp" />
+                android:layout_marginLeft="25dp"
 
-            <TextView
-                android:id="@+id/category"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@id/tittle"
-                android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="36dp"
-                android:hint="category" />
+                android:text="Correct" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="300sp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/category"
-                android:src="@drawable/cam" />
-
-            <TextView
-                android:id="@+id/tags"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/Incorrect"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imageView"
                 android:layout_marginLeft="15dp"
+
                 android:layout_marginRight="15dp"
-                android:hint="Search Tags" />
+                android:text="Incorrect"
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/radioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tags"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
+                />
+        </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/Correct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
+    </LinearLayout>
+    <!--</ScrollView>-->
 
-                    android:layout_marginRight="15dp"
-                    android:text="Correct" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linlayoutmain"
+        android:layout_above="@+id/idcommentbox">
 
-                <RadioButton
-                    android:id="@+id/Incorrect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
 
-                    android:layout_marginRight="15dp"
-                    android:text="Incorrect"
-
-                    />
-            </RadioGroup>
+    </RelativeLayout>
 
 
-            <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/idcommentbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/txtViewComment"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tags"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3"
+            android:background="@drawable/edittext_bg"
+            android:gravity="top|left"
+            android:hint="Comment"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Submit"
+            android:textSize="10dp" />
 
 
-                    <ListView
-                        android:id="@+id/listView"
-                        android:layout_width="match_parent"
-                        android:layout_height="220dp"
-                        android:scrollbars="vertical"
-                        tools:layout_editor_absoluteX="8dp"
-                        tools:layout_editor_absoluteY="8dp" />
-
-
-            </ScrollView>
-
-            <EditText
-                android:id="@+id/txtViewComment"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tags"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="52dp"
-                android:background="@drawable/edittext_bg"
-                android:gravity="top|left"
-                android:hint="Comment"
-                android:scrollbars="vertical" />
-
-            <Button
-                android:id="@+id/submit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:text="Submit" />
-
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>
